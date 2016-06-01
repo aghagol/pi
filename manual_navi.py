@@ -19,36 +19,64 @@ while s!=ord('q'):
 	s = myscreen.getch()
 
 	if chr(s)=='A':
-		if state=='forward':
-			speed+=speed_step
+
+		if state=='forward' and speed<100:
+			speed += speed_step
+			mover.forward(speed)
+
+		elif state=='backward' and speed>speed_step:
+			speed -= speed_step
+			mover.backward(speed)
+
 		else:
-			speed=speed_start
-		state = 'forward'
-		mover.forward(speed)
+			speed = speed_start
+			state = 'forward'
+			mover.forward(speed)
 
 	if chr(s)=='B':
-		if state=='backward':
-			speed+=speed_step
+
+		if state=='backward' and speed<100:
+			speed += speed_step
+			mover.backward(speed)
+
+		elif state=='forward' and speed>speed_step:
+			speed -= speed_step
+			mover.forward(speed)
+
 		else:
-			speed=speed_start
-		state = 'backward'
-		mover.backward(speed)
+			speed = speed_start
+			state = 'backward'
+			mover.backward(speed)
 
 	if chr(s)=='C':
-		if state=='rotate_right':
-			speed+=speed_step
+
+		if state=='rotate_right' and speed<100:
+			speed += speed_step
+			mover.rotate_right(speed)
+
+		elif state=='rotate_left' and speed>speed_step:
+			speed -= speed_step
+			mover.rotate_left(speed)
+
 		else:
-			speed=speed_start
-		state = 'rotate_right'
-		mover.rotate_right(speed)
+			speed = speed_start
+			state = 'rotate_right'
+			mover.rotate_right(speed)
 
 	if chr(s)=='D':
-		if state=='rotate_left':
-			speed+=speed_step
+
+		if state=='rotate_left' and speed<100:
+			speed += speed_step
+			mover.rotate_left(speed)
+
+		elif state=='rotate_right' and speed>speed_step:
+			speed -= speed_step
+			mover.rotate_right(speed)
+
 		else:
-			speed=speed_start
-		state = 'rotate_left'
-		mover.rotate_left(speed)
+			speed = speed_start
+			state = 'rotate_left'
+			mover.rotate_left(speed)
 
 	if chr(s)==' ':
 		mover.stop()
