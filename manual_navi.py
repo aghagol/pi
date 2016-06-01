@@ -9,6 +9,7 @@ myscreen = curses.initscr()
 
 state = 'stop'
 speed_start = 50
+speed_step = 10
 
 while s!=ord('q'):
 
@@ -19,7 +20,7 @@ while s!=ord('q'):
 
 	if chr(s)=='A':
 		if state=='forward':
-			speed+=20
+			speed+=speed_step
 		else:
 			speed=speed_start
 		state = 'forward'
@@ -27,7 +28,7 @@ while s!=ord('q'):
 
 	if chr(s)=='B':
 		if state=='backward':
-			speed+=20
+			speed+=speed_step
 		else:
 			speed=speed_start
 		state = 'backward'
@@ -35,7 +36,7 @@ while s!=ord('q'):
 
 	if chr(s)=='C':
 		if state=='rotate_right':
-			speed+=20
+			speed+=speed_step
 		else:
 			speed=speed_start
 		state = 'rotate_right'
@@ -43,7 +44,7 @@ while s!=ord('q'):
 
 	if chr(s)=='D':
 		if state=='rotate_left':
-			speed+=20
+			speed+=speed_step
 		else:
 			speed=speed_start
 		state = 'rotate_left'
