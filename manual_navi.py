@@ -10,6 +10,7 @@ myscreen = curses.initscr()
 state = 'stop'
 speed_start = 50
 speed_step = 10
+speed_turn_bias = 30
 
 while s!=ord('q'):
 
@@ -59,7 +60,7 @@ while s!=ord('q'):
 			mover.rotate_left(speed)
 
 		else:
-			speed = speed_start
+			speed = speed_start + speed_turn_bias
 			state = 'rotate_right'
 			mover.rotate_right(speed)
 
@@ -74,7 +75,7 @@ while s!=ord('q'):
 			mover.rotate_right(speed)
 
 		else:
-			speed = speed_start
+			speed = speed_start + speed_turn_bias
 			state = 'rotate_left'
 			mover.rotate_left(speed)
 
