@@ -14,17 +14,18 @@ while s!=ord('q'):
 	s = myscreen.getch()
 	if chr(s)=='A':
 		mover.forward(55)
-		time.sleep(.1)
+		# time.sleep(.5)
 	if chr(s)=='B':
 		mover.backward(55)
-		time.sleep(.1)
+		# time.sleep(.5)
 	if chr(s)=='C':
 		mover.rotate_right(55)
-		time.sleep(.1)
+		# time.sleep(.5)
 	if chr(s)=='D':
 		mover.rotate_left(55)
-		time.sleep(.1)
-	mover.stop()
+		# time.sleep(.5)
+	if chr(s)==' ':
+		mover.stop()
 
 mover.stop()
 curses.endwin()
