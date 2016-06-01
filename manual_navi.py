@@ -24,7 +24,7 @@ while s!=ord('q'):
 			speed += speed_step
 			mover.forward(speed)
 
-		elif state=='backward' and speed>speed_step:
+		elif state=='backward' and speed>speed_start:
 			speed -= speed_step
 			mover.backward(speed)
 
@@ -39,7 +39,7 @@ while s!=ord('q'):
 			speed += speed_step
 			mover.backward(speed)
 
-		elif state=='forward' and speed>speed_step:
+		elif state=='forward' and speed>speed_start:
 			speed -= speed_step
 			mover.forward(speed)
 
@@ -54,7 +54,7 @@ while s!=ord('q'):
 			speed += speed_step
 			mover.rotate_right(speed)
 
-		elif state=='rotate_left' and speed>speed_step:
+		elif state=='rotate_left' and speed>speed_start:
 			speed -= speed_step
 			mover.rotate_left(speed)
 
@@ -69,7 +69,7 @@ while s!=ord('q'):
 			speed += speed_step
 			mover.rotate_left(speed)
 
-		elif state=='rotate_right' and speed>speed_step:
+		elif state=='rotate_right' and speed>speed_start:
 			speed -= speed_step
 			mover.rotate_right(speed)
 
@@ -80,6 +80,7 @@ while s!=ord('q'):
 
 	if chr(s)==' ':
 		mover.stop()
+		speed = speed_start
 
 mover.stop()
 curses.endwin()
