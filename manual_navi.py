@@ -80,6 +80,7 @@ while s!=ord('q'):
 
 	if chr(s)==' ':
 		mover.stop()
+		state = 'stop'
 		speed = speed_start
 
 mover.stop()
