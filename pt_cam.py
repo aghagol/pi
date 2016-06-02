@@ -11,27 +11,27 @@ t=GPIO.PWM(18,50)
 
 p.start(5)
 t.start(8)
-sleep(.1)
+sleep(1)
 
 p.ChangeDutyCycle(8)
 t.ChangeDutyCycle(8)
-sleep(.1)
+sleep(1)
 
 p.ChangeDutyCycle(9)
 t.ChangeDutyCycle(5)
-sleep(.1)
+sleep(1)
 
 p.ChangeDutyCycle(9)
 t.ChangeDutyCycle(8)
-sleep(.1)
+sleep(1)
 
 p.ChangeDutyCycle(11)
 t.ChangeDutyCycle(8)
-sleep(.1)
+sleep(1)
 
 p.ChangeDutyCycle(9)
 t.ChangeDutyCycle(8)
-sleep(.1)
+sleep(1)
 
 p.stop()
 t.stop()
