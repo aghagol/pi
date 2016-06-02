@@ -10,19 +10,28 @@ p=GPIO.PWM(16,50)
 t=GPIO.PWM(18,50)
 
 p.start(5)
-t.start(5)
+t.start(8)
 sleep(.1)
 
-for d in np.arange(5.5,10,.5):
-	p.ChangeDutyCycle(d)
-	sleep(.1)
-p.ChangeDutyCycle(5)
-
+p.ChangeDutyCycle(8)
+t.ChangeDutyCycle(8)
 sleep(.1)
-for d in np.arange(5.5,10,.5):
-	t.ChangeDutyCycle(d)
-	sleep(.1)
+
+p.ChangeDutyCycle(9)
 t.ChangeDutyCycle(5)
+sleep(.1)
+
+p.ChangeDutyCycle(9)
+t.ChangeDutyCycle(8)
+sleep(.1)
+
+p.ChangeDutyCycle(11)
+t.ChangeDutyCycle(8)
+sleep(.1)
+
+p.ChangeDutyCycle(9)
+t.ChangeDutyCycle(8)
+sleep(.1)
 
 p.stop()
 t.stop()
