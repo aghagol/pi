@@ -22,7 +22,7 @@ camera = picamera.PiCamera()
 # camera.color_effects = None
 # camera.rotation = 0
 # camera.hflip = False
-# camera.vflip = False
+camera.vflip = True
 # camera.crop = (0.0, 0.0, 1.0, 1.0)
 
 
