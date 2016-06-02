@@ -12,7 +12,12 @@ t=GPIO.PWM(18,50)
 p.start(5)
 t.start(5)
 for d in np.arange(5.5,10,.5):
-	pwm.ChangeDutyCycle(d)
+	p.ChangeDutyCycle(d)
+p.ChangeDutyCycle(5)
+
+for d in np.arange(5.5,10,.5):
+	t.ChangeDutyCycle(d)
+t.ChangeDutyCycle(5)
 
 GPIO.cleanup()
 # pwm.ChangeDutyCycle(7.5)
