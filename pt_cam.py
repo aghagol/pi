@@ -17,19 +17,19 @@ p.ChangeDutyCycle(8)
 t.ChangeDutyCycle(8)
 sleep(1)
 
-p.ChangeDutyCycle(9)
+p.ChangeDutyCycle(8)
 t.ChangeDutyCycle(5)
 sleep(1)
 
-p.ChangeDutyCycle(9)
+p.ChangeDutyCycle(8)
 t.ChangeDutyCycle(8)
 sleep(1)
 
-p.ChangeDutyCycle(11)
+p.ChangeDutyCycle(12)
 t.ChangeDutyCycle(8)
 sleep(1)
 
-p.ChangeDutyCycle(9)
+p.ChangeDutyCycle(8)
 t.ChangeDutyCycle(8)
 sleep(1)
 
